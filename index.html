@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <title>bouncy</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        --ball-size: 40px;
+      }
+
+      .box {
+        background-color: rgb(32, 41, 45);
+        margin: 0 auto;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        box-shadow: inset 0 0 var(--ball-size) rgba(0 0 0 / 0.3);
+        border: 1px solid rgba(0 0 0 / 0.3);
+        overflow: hidden;
+      }
+
+      .box b {
+        display: block;
+        width: var(--ball-size);
+        height: var(--ball-size);
+        border-radius: 50%;
+        background-color: #735787;
+        box-shadow: inset -5px -3px 18px rgba(0, 0, 0, 0.6),
+          10px 7px 6px rgba(0, 0, 0, 0.04);
+        position: absolute;
+        animation: moveX 7s linear 0s infinite alternate,
+          moveY 3.9375s linear 0s infinite alternate;
+      }
+
+      @-webkit-keyframes moveX {
+        from {
+          left: 0;
+        }
+        to {
+          left: calc(100% - var(--ball-size));
+        }
+      }
+      @-moz-keyframes moveX {
+        from {
+          left: 0;
+        }
+        to {
+          left: calc(100% - var(--ball-size));
+        }
+      }
+      @-o-keyframes moveX {
+        from {
+          left: 0;
+        }
+        to {
+          left: calc(100% - var(--ball-size));
+        }
+      }
+      @keyframes moveX {
+        from {
+          left: 0;
+        }
+        to {
+          left: calc(100% - var(--ball-size));
+        }
+      }
+
+      @-webkit-keyframes moveY {
+        from {
+          top: 0;
+        }
+        to {
+          top: calc(100% - var(--ball-size));
+        }
+      }
+      @-moz-keyframes moveY {
+        from {
+          top: 0;
+        }
+        to {
+          top: calc(100% - var(--ball-size));
+        }
+      }
+      @-o-keyframes moveY {
+        from {
+          top: 0;
+        }
+        to {
+          top: calc(100% - var(--ball-size));
+        }
+      }
+      @keyframes moveY {
+        from {
+          top: 0;
+        }
+        to {
+          top: calc(100% - var(--ball-size));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"><b></b></div>
+  </body>
+</html>
+
